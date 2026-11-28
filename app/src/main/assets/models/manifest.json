@@ -1,0 +1,725 @@
+{
+  "version": 1,
+  "assets": {
+    "FIREARM_GLOCK18": {
+      "path": "models/firearms/glock18_style.glb",
+      "vertices": 24384,
+      "triangles": 30333,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.0461,
+          0.0382
+        ],
+        "muzzle": [
+          0.0,
+          0.0545,
+          -0.1195
+        ]
+      }
+    },
+    "FIREARM_SERVICE_PISTOL": {
+      "path": "models/firearms/service_pistol.glb",
+      "vertices": 636,
+      "triangles": 300,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.03,
+          0.015
+        ],
+        "muzzle": [
+          0.0,
+          0.029,
+          -0.183
+        ]
+      }
+    },
+    "FIREARM_MP5": {
+      "path": "models/firearms/mp5_style.glb",
+      "vertices": 1108,
+      "triangles": 508,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.03,
+          0.01
+        ],
+        "foregrip": [
+          0.0,
+          -0.01,
+          -0.175
+        ],
+        "muzzle": [
+          0.0,
+          0.025,
+          -0.356
+        ]
+      }
+    },
+    "FIREARM_M4A1": {
+      "path": "models/firearms/m4a1_style.glb",
+      "vertices": 10724,
+      "triangles": 9236,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.0586,
+          0.1031
+        ],
+        "foregrip": [
+          0.0,
+          -0.0213,
+          -0.1374
+        ],
+        "muzzle": [
+          0.0,
+          0.032,
+          -0.4294
+        ]
+      }
+    },
+    "FIREARM_SHOTGUN": {
+      "path": "models/firearms/pump_shotgun.glb",
+      "vertices": 2444,
+      "triangles": 1124,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.028,
+          0.015
+        ],
+        "foregrip": [
+          0.0,
+          0.0,
+          -0.245
+        ],
+        "muzzle": [
+          0.0,
+          0.036,
+          -0.542
+        ]
+      }
+    },
+    "FIREARM_SNIPER": {
+      "path": "models/firearms/bolt_sniper.glb",
+      "vertices": 56117,
+      "triangles": 19996,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.0607,
+          0.2068
+        ],
+        "foregrip": [
+          0.0,
+          -0.0542,
+          -0.0827
+        ],
+        "muzzle": [
+          0.0,
+          0.0173,
+          -0.517
+        ]
+      }
+    },
+    "FIREARM_AK47": {
+      "path": "models/firearms/ak47_style.glb",
+      "vertices": 15823,
+      "triangles": 16578,
+      "sockets": {
+        "grip": [
+          0.0,
+          -0.0631,
+          0.1237
+        ],
+        "foregrip": [
+          0.0,
+          -0.023,
+          -0.1649
+        ],
+        "muzzle": [
+          0.0,
+          0.0344,
+          -0.5153
+        ]
+      }
+    },
+    "AMMO_BOX_9MM_AUTO": {
+      "path": "models/ammo/ammo_box_9mm_pistol.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_45_SERVICE": {
+      "path": "models/ammo/ammo_box_45_service.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_SMG_9MM": {
+      "path": "models/ammo/ammo_box_smg_9mm.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_556_CARBINE": {
+      "path": "models/ammo/ammo_box_556_rifle.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_12G_BUCKSHOT": {
+      "path": "models/ammo/ammo_box_12g_shotgun.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_762_MATCH": {
+      "path": "models/ammo/ammo_box_762_sniper.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "AMMO_BOX_762_AK47": {
+      "path": "models/ammo/ammo_box_762_ak47.glb",
+      "vertices": 4074,
+      "triangles": 4382,
+      "sockets": {}
+    },
+    "GRENADE_FRAG": {
+      "path": "models/equipment/grenade_frag.glb",
+      "vertices": 3096,
+      "triangles": 3642,
+      "sockets": {}
+    },
+    "GRENADE_SMOKE": {
+      "path": "models/equipment/grenade_smoke.glb",
+      "vertices": 2636,
+      "triangles": 2810,
+      "sockets": {}
+    },
+    "HAMMER_CLAW": {
+      "path": "models/tools/hammer_claw.glb",
+      "vertices": 480,
+      "triangles": 204,
+      "sockets": {}
+    },
+    "MALLET_HEAD": {
+      "path": "models/tools/mallet_head.glb",
+      "vertices": 260,
+      "triangles": 104,
+      "sockets": {}
+    },
+    "WRENCH_OPEN": {
+      "path": "models/tools/wrench_open.glb",
+      "vertices": 6884,
+      "triangles": 10746,
+      "sockets": {}
+    },
+    "RATCHET_SOCKET": {
+      "path": "models/tools/ratchet_socket.glb",
+      "vertices": 480,
+      "triangles": 192,
+      "sockets": {}
+    },
+    "SCREWDRIVER_DRIVER": {
+      "path": "models/tools/screwdriver_driver.glb",
+      "vertices": 304,
+      "triangles": 124,
+      "sockets": {}
+    },
+    "PLIERS_JAWS": {
+      "path": "models/tools/pliers_jaws.glb",
+      "vertices": 216,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "HAND_SAW_BLADE": {
+      "path": "models/tools/hand_saw_blade.glb",
+      "vertices": 264,
+      "triangles": 132,
+      "sockets": {}
+    },
+    "POWER_DRILL": {
+      "path": "models/tools/power_drill.glb",
+      "vertices": 416,
+      "triangles": 188,
+      "sockets": {}
+    },
+    "ANGLE_GRINDER": {
+      "path": "models/tools/angle_grinder.glb",
+      "vertices": 452,
+      "triangles": 188,
+      "sockets": {}
+    },
+    "CIRCULAR_SAW": {
+      "path": "models/tools/circular_saw.glb",
+      "vertices": 348,
+      "triangles": 156,
+      "sockets": {}
+    },
+    "HEAT_GUN_NOZZLE": {
+      "path": "models/tools/heat_gun_nozzle.glb",
+      "vertices": 264,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "WELDING_UNIT": {
+      "path": "models/tools/welding_unit.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "WELDING_TORCH": {
+      "path": "models/tools/welding_torch.glb",
+      "vertices": 300,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "CLAMP_C_FRAME": {
+      "path": "models/tools/clamp_c_frame.glb",
+      "vertices": 152,
+      "triangles": 68,
+      "sockets": {}
+    },
+    "HYDRAULIC_JACK": {
+      "path": "models/tools/hydraulic_jack.glb",
+      "vertices": 332,
+      "triangles": 140,
+      "sockets": {}
+    },
+    "HOIST_WINCH": {
+      "path": "models/tools/hoist_winch.glb",
+      "vertices": 212,
+      "triangles": 92,
+      "sockets": {}
+    },
+    "COMPRESSOR_TANK": {
+      "path": "models/tools/compressor_tank.glb",
+      "vertices": 256,
+      "triangles": 112,
+      "sockets": {}
+    },
+    "FAN_SHROUD": {
+      "path": "models/tools/fan_shroud.glb",
+      "vertices": 816,
+      "triangles": 396,
+      "sockets": {}
+    },
+    "GENERATOR_FRAME": {
+      "path": "models/tools/generator_frame.glb",
+      "vertices": 241,
+      "triangles": 162,
+      "sockets": {}
+    },
+    "DIGITAL_METER": {
+      "path": "models/tools/digital_meter.glb",
+      "vertices": 216,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "THERMOMETER_PROBE": {
+      "path": "models/tools/thermometer_probe.glb",
+      "vertices": 144,
+      "triangles": 72,
+      "sockets": {}
+    },
+    "SCALE_PLATFORM": {
+      "path": "models/tools/scale_platform.glb",
+      "vertices": 144,
+      "triangles": 72,
+      "sockets": {}
+    },
+    "CALIPER_SLIDE": {
+      "path": "models/tools/caliper_slide.glb",
+      "vertices": 72,
+      "triangles": 36,
+      "sockets": {}
+    },
+    "PRESSURE_DIAL": {
+      "path": "models/tools/pressure_dial.glb",
+      "vertices": 260,
+      "triangles": 104,
+      "sockets": {}
+    },
+    "OPTICAL_MICROSCOPE": {
+      "path": "models/tools/optical_microscope.glb",
+      "vertices": 216,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "LAB_BEAKER": {
+      "path": "models/tools/lab_beaker.glb",
+      "vertices": 544,
+      "triangles": 256,
+      "sockets": {}
+    },
+    "EXTINGUISHER_CYL": {
+      "path": "models/tools/extinguisher_cyl.glb",
+      "vertices": 360,
+      "triangles": 144,
+      "sockets": {}
+    },
+    "FLASHLIGHT_TORCH": {
+      "path": "models/tools/flashlight_torch.glb",
+      "vertices": 400,
+      "triangles": 160,
+      "sockets": {}
+    },
+    "WORKLIGHT_TRIPOD": {
+      "path": "models/tools/worklight_tripod.glb",
+      "vertices": 3542,
+      "triangles": 4668,
+      "sockets": {}
+    },
+    "DETECTOR_WAND": {
+      "path": "models/tools/detector_wand.glb",
+      "vertices": 556,
+      "triangles": 268,
+      "sockets": {}
+    },
+    "MAGNET_HORSESHOE": {
+      "path": "models/tools/magnet_horseshoe.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "SUCTION_CUP_HANDLE": {
+      "path": "models/tools/suction_cup_handle.glb",
+      "vertices": 208,
+      "triangles": 88,
+      "sockets": {}
+    },
+    "PULLEY_BLOCK": {
+      "path": "models/tools/pulley_block.glb",
+      "vertices": 432,
+      "triangles": 216,
+      "sockets": {}
+    },
+    "SPIRIT_LEVEL": {
+      "path": "models/tools/spirit_level.glb",
+      "vertices": 172,
+      "triangles": 76,
+      "sockets": {}
+    },
+    "REINFORCED_CRATE": {
+      "path": "models/containers/reinforced_crate.glb",
+      "vertices": 888,
+      "triangles": 444,
+      "sockets": {}
+    },
+    "WOOD_PALLET_CRATE": {
+      "path": "models/containers/wood_pallet_crate.glb",
+      "vertices": 240,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "GLASS_CONTAINER": {
+      "path": "models/containers/glass_container.glb",
+      "vertices": 96,
+      "triangles": 48,
+      "sockets": {}
+    },
+    "BARREL_DRUM": {
+      "path": "models/containers/barrel_drum.glb",
+      "vertices": 1110,
+      "triangles": 944,
+      "sockets": {}
+    },
+    "TREADED_TIRE": {
+      "path": "models/mechanical/treaded_tire.glb",
+      "vertices": 2090,
+      "triangles": 2880,
+      "sockets": {}
+    },
+    "GYRO_FLYWHEEL": {
+      "path": "models/mechanical/gyro_flywheel.glb",
+      "vertices": 1124,
+      "triangles": 536,
+      "sockets": {}
+    },
+    "SPRING_PISTON": {
+      "path": "models/mechanical/spring_piston.glb",
+      "vertices": 1048,
+      "triangles": 496,
+      "sockets": {}
+    },
+    "GEAR_WHEEL": {
+      "path": "models/mechanical/gear_wheel.glb",
+      "vertices": 576,
+      "triangles": 264,
+      "sockets": {}
+    },
+    "AXLE_ROD": {
+      "path": "models/mechanical/axle_rod.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "SUSPENSION_BOGIE": {
+      "path": "models/mechanical/suspension_bogie.glb",
+      "vertices": 552,
+      "triangles": 228,
+      "sockets": {}
+    },
+    "STEEL_IBEAM": {
+      "path": "models/construction/steel_ibeam.glb",
+      "vertices": 240,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "CONCRETE_MASONRY": {
+      "path": "models/construction/concrete_masonry.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "RAMP_WEDGE": {
+      "path": "models/construction/ramp_wedge.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "CENTRIFUGE_POD": {
+      "path": "models/laboratory/centrifuge_pod.glb",
+      "vertices": 480,
+      "triangles": 192,
+      "sockets": {}
+    },
+    "LAB_CONSOLE": {
+      "path": "models/laboratory/lab_console.glb",
+      "vertices": 4554,
+      "triangles": 2612,
+      "sockets": {}
+    },
+    "LAB_TABLE": {
+      "path": "models/laboratory/lab_table.glb",
+      "vertices": 192,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "GEODESIC_SPHERE": {
+      "path": "models/experimental/geodesic_sphere.glb",
+      "vertices": 1464,
+      "triangles": 712,
+      "sockets": {}
+    },
+    "DOMINO_MONOLITH": {
+      "path": "models/experimental/domino_monolith.glb",
+      "vertices": 96,
+      "triangles": 48,
+      "sockets": {}
+    },
+    "SOFT_FOAM_BLOCK": {
+      "path": "models/experimental/soft_foam_block.glb",
+      "vertices": 72,
+      "triangles": 36,
+      "sockets": {}
+    },
+    "BUOYANCY_FLOAT": {
+      "path": "models/experimental/buoyancy_float.glb",
+      "vertices": 408,
+      "triangles": 204,
+      "sockets": {}
+    },
+    "LAB_WORKBENCH": {
+      "path": "models/furniture/lab_workbench.glb",
+      "vertices": 192,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "OFFICE_CHAIR": {
+      "path": "models/furniture/office_chair.glb",
+      "vertices": 292,
+      "triangles": 136,
+      "sockets": {}
+    },
+    "METAL_CABINET": {
+      "path": "models/furniture/metal_cabinet.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "WALL_CABINET": {
+      "path": "models/furniture/wall_cabinet.glb",
+      "vertices": 3629,
+      "triangles": 4404,
+      "sockets": {}
+    },
+    "BATTERY_UNIT": {
+      "path": "models/electrical/battery_unit.glb",
+      "vertices": 272,
+      "triangles": 116,
+      "sockets": {}
+    },
+    "SWITCH_BOX": {
+      "path": "models/electrical/switch_box.glb",
+      "vertices": 20452,
+      "triangles": 21272,
+      "sockets": {}
+    },
+    "LIGHT_BULB_LAMP": {
+      "path": "models/electrical/light_bulb_lamp.glb",
+      "vertices": 6816,
+      "triangles": 10902,
+      "sockets": {}
+    },
+    "LED_INDICATOR": {
+      "path": "models/electrical/led_indicator.glb",
+      "vertices": 552,
+      "triangles": 252,
+      "sockets": {}
+    },
+    "DC_MOTOR": {
+      "path": "models/electrical/dc_motor.glb",
+      "vertices": 284,
+      "triangles": 116,
+      "sockets": {}
+    },
+    "KINETIC_GENERATOR": {
+      "path": "models/electrical/kinetic_generator.glb",
+      "vertices": 241,
+      "triangles": 162,
+      "sockets": {}
+    },
+    "FUSE_BLOCK": {
+      "path": "models/electrical/fuse_block.glb",
+      "vertices": 172,
+      "triangles": 76,
+      "sockets": {}
+    },
+    "CIRCUIT_CONNECTOR": {
+      "path": "models/electrical/circuit_connector.glb",
+      "vertices": 232,
+      "triangles": 100,
+      "sockets": {}
+    },
+    "ELECTRICAL_PANEL": {
+      "path": "models/electrical/electrical_panel.glb",
+      "vertices": 5068,
+      "triangles": 6268,
+      "sockets": {}
+    },
+    "SHELF_RACK": {
+      "path": "models/environment/shelf_rack.glb",
+      "vertices": 192,
+      "triangles": 96,
+      "sockets": {}
+    },
+    "CONVEYOR_UNIT": {
+      "path": "models/environment/conveyor_unit.glb",
+      "vertices": 312,
+      "triangles": 156,
+      "sockets": {}
+    },
+    "SHIPPING_CONTAINER": {
+      "path": "models/environment/shipping_container.glb",
+      "vertices": 504,
+      "triangles": 252,
+      "sockets": {}
+    },
+    "SCAFFOLD_FRAME": {
+      "path": "models/environment/scaffold_frame.glb",
+      "vertices": 480,
+      "triangles": 240,
+      "sockets": {}
+    },
+    "FLOOR_SLAB": {
+      "path": "models/environment/floor_slab.glb",
+      "vertices": 72,
+      "triangles": 36,
+      "sockets": {}
+    },
+    "WALL_PANEL": {
+      "path": "models/environment/wall_panel.glb",
+      "vertices": 72,
+      "triangles": 36,
+      "sockets": {}
+    },
+    "PILLAR_COLUMN": {
+      "path": "models/environment/pillar_column.glb",
+      "vertices": 72,
+      "triangles": 36,
+      "sockets": {}
+    },
+    "GLASS_PARTITION": {
+      "path": "models/environment/glass_partition.glb",
+      "vertices": 120,
+      "triangles": 60,
+      "sockets": {}
+    },
+    "CRANE_BOOM": {
+      "path": "models/environment/crane_boom.glb",
+      "vertices": 288,
+      "triangles": 144,
+      "sockets": {}
+    },
+    "CEILING_LIGHT": {
+      "path": "models/environment/ceiling_light.glb",
+      "vertices": 3588,
+      "triangles": 4446,
+      "sockets": {}
+    },
+    "DOOR_FRAME": {
+      "path": "models/environment/door_frame.glb",
+      "vertices": 240,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "WINDOW_FRAME": {
+      "path": "models/environment/window_frame.glb",
+      "vertices": 312,
+      "triangles": 156,
+      "sockets": {}
+    },
+    "CNC_MACHINE": {
+      "path": "models/environment/cnc_machine.glb",
+      "vertices": 360,
+      "triangles": 168,
+      "sockets": {}
+    },
+    "HYDRAULIC_PRESS": {
+      "path": "models/environment/hydraulic_press.glb",
+      "vertices": 428,
+      "triangles": 200,
+      "sockets": {}
+    },
+    "ROOF_TRUSS": {
+      "path": "models/environment/roof_truss.glb",
+      "vertices": 264,
+      "triangles": 132,
+      "sockets": {}
+    },
+    "STAIR_FLIGHT": {
+      "path": "models/environment/stair_flight.glb",
+      "vertices": 240,
+      "triangles": 120,
+      "sockets": {}
+    },
+    "PIPE_CONDUIT": {
+      "path": "models/environment/pipe_conduit.glb",
+      "vertices": 504,
+      "triangles": 240,
+      "sockets": {}
+    },
+    "SAFETY_RAIL": {
+      "path": "models/environment/safety_rail.glb",
+      "vertices": 144,
+      "triangles": 72,
+      "sockets": {}
+    },
+    "WARNING_STRIPE_CURB": {
+      "path": "models/environment/warning_stripe_curb.glb",
+      "vertices": 12499,
+      "triangles": 23822,
+      "sockets": {}
+    },
+    "CEILING_VENT": {
+      "path": "models/environment/ceiling_vent.glb",
+      "vertices": 6841,
+      "triangles": 9493,
+      "sockets": {}
+    }
+  }
+}

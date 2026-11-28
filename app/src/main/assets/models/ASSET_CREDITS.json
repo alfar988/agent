@@ -1,0 +1,1100 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "source_1",
+      "name": "Source 1 \u2014 Firearm & Character Archive",
+      "url": "https://files.catbox.moe/vhh2qy.zip",
+      "license": "Provided User Archive",
+      "notes": "Sole source for imported firearm GLBs (P-18, M4A1, Bolt Sniper, AK-47), frag/smoke grenades, and tactical companion character rig."
+    },
+    {
+      "id": "source_2",
+      "name": "Source 2 \u2014 Summer Engine Library",
+      "url": "https://summerengine.com",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "notes": "Non-firearm industrial, electrical, laboratory, container, tool, curb, and ammo box GLB props."
+    },
+    {
+      "id": "kineticlab",
+      "name": "KineticLab 3D Original Procedural Assets",
+      "url": "local://kineticlab3d",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "notes": "Preserved operator LOD rigs, procedural firearms (M45, MP5, Shotgun), and custom physics/architectural meshes."
+    }
+  ],
+  "entries": [
+    {
+      "key": "FIREARM_GLOCK18",
+      "path": "models/firearms/glock18_style.glb",
+      "title": "P-18 Auto Pistol",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "Glock-18-model.glb"
+    },
+    {
+      "key": "FIREARM_SERVICE_PISTOL",
+      "path": "models/firearms/service_pistol.glb",
+      "title": "Firearm Service Pistol",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "service_pistol.glb"
+    },
+    {
+      "key": "FIREARM_MP5",
+      "path": "models/firearms/mp5_style.glb",
+      "title": "Firearm Mp5",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "mp5_style.glb"
+    },
+    {
+      "key": "FIREARM_M4A1",
+      "path": "models/firearms/m4a1_style.glb",
+      "title": "M4 Tactical Carbine",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "rifle-m4a1.glb"
+    },
+    {
+      "key": "FIREARM_SHOTGUN",
+      "path": "models/firearms/pump_shotgun.glb",
+      "title": "Firearm Shotgun",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pump_shotgun.glb"
+    },
+    {
+      "key": "FIREARM_SNIPER",
+      "path": "models/firearms/bolt_sniper.glb",
+      "title": "Precision Bolt Rifle",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "m40a3-sniper-rifle.glb"
+    },
+    {
+      "key": "FIREARM_AK47",
+      "path": "models/firearms/ak47_style.glb",
+      "title": "CR-47 Assault Rifle",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "rifle-ak47.glb"
+    },
+    {
+      "key": "AMMO_BOX_9MM_AUTO",
+      "path": "models/ammo/ammo_box_9mm_pistol.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_45_SERVICE",
+      "path": "models/ammo/ammo_box_45_service.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_SMG_9MM",
+      "path": "models/ammo/ammo_box_smg_9mm.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_556_CARBINE",
+      "path": "models/ammo/ammo_box_556_rifle.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_12G_BUCKSHOT",
+      "path": "models/ammo/ammo_box_12g_shotgun.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_762_MATCH",
+      "path": "models/ammo/ammo_box_762_sniper.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "AMMO_BOX_762_AK47",
+      "path": "models/ammo/ammo_box_762_ak47.glb",
+      "title": "Ammo box",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-ammo-box",
+      "originalAsset": "ammo-box"
+    },
+    {
+      "key": "GRENADE_FRAG",
+      "path": "models/equipment/grenade_frag.glb",
+      "title": "Fragmentation Grenade",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "grenade-frag.glb"
+    },
+    {
+      "key": "GRENADE_SMOKE",
+      "path": "models/equipment/grenade_smoke.glb",
+      "title": "Smoke Canister Grenade",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "grenade-smoke.glb"
+    },
+    {
+      "key": "HAMMER_CLAW",
+      "path": "models/tools/hammer_claw.glb",
+      "title": "Hammer Claw",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "hammer_claw.glb"
+    },
+    {
+      "key": "MALLET_HEAD",
+      "path": "models/tools/mallet_head.glb",
+      "title": "Mallet Head",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "mallet_head.glb"
+    },
+    {
+      "key": "WRENCH_OPEN",
+      "path": "models/tools/wrench_open.glb",
+      "title": "Pipe wrench",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-pipe-wrench",
+      "originalAsset": "pipe-wrench"
+    },
+    {
+      "key": "RATCHET_SOCKET",
+      "path": "models/tools/ratchet_socket.glb",
+      "title": "Ratchet Socket",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "ratchet_socket.glb"
+    },
+    {
+      "key": "SCREWDRIVER_DRIVER",
+      "path": "models/tools/screwdriver_driver.glb",
+      "title": "Screwdriver Driver",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "screwdriver_driver.glb"
+    },
+    {
+      "key": "PLIERS_JAWS",
+      "path": "models/tools/pliers_jaws.glb",
+      "title": "Pliers Jaws",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pliers_jaws.glb"
+    },
+    {
+      "key": "HAND_SAW_BLADE",
+      "path": "models/tools/hand_saw_blade.glb",
+      "title": "Hand Saw Blade",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "hand_saw_blade.glb"
+    },
+    {
+      "key": "POWER_DRILL",
+      "path": "models/tools/power_drill.glb",
+      "title": "Power Drill",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "power_drill.glb"
+    },
+    {
+      "key": "ANGLE_GRINDER",
+      "path": "models/tools/angle_grinder.glb",
+      "title": "Angle Grinder",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "angle_grinder.glb"
+    },
+    {
+      "key": "CIRCULAR_SAW",
+      "path": "models/tools/circular_saw.glb",
+      "title": "Circular Saw",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "circular_saw.glb"
+    },
+    {
+      "key": "HEAT_GUN_NOZZLE",
+      "path": "models/tools/heat_gun_nozzle.glb",
+      "title": "Heat Gun Nozzle",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "heat_gun_nozzle.glb"
+    },
+    {
+      "key": "WELDING_UNIT",
+      "path": "models/tools/welding_unit.glb",
+      "title": "Welding Unit",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "welding_unit.glb"
+    },
+    {
+      "key": "WELDING_TORCH",
+      "path": "models/tools/welding_torch.glb",
+      "title": "Welding Torch",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "welding_torch.glb"
+    },
+    {
+      "key": "CLAMP_C_FRAME",
+      "path": "models/tools/clamp_c_frame.glb",
+      "title": "Clamp C Frame",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "clamp_c_frame.glb"
+    },
+    {
+      "key": "HYDRAULIC_JACK",
+      "path": "models/tools/hydraulic_jack.glb",
+      "title": "Hydraulic Jack",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "hydraulic_jack.glb"
+    },
+    {
+      "key": "HOIST_WINCH",
+      "path": "models/tools/hoist_winch.glb",
+      "title": "Hoist Winch",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "hoist_winch.glb"
+    },
+    {
+      "key": "COMPRESSOR_TANK",
+      "path": "models/tools/compressor_tank.glb",
+      "title": "Compressor Tank",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "compressor_tank.glb"
+    },
+    {
+      "key": "FAN_SHROUD",
+      "path": "models/tools/fan_shroud.glb",
+      "title": "Fan Shroud",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "fan_shroud.glb"
+    },
+    {
+      "key": "GENERATOR_FRAME",
+      "path": "models/tools/generator_frame.glb",
+      "title": "psx industrial pack GeneratorPortable",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-psx-industrial-pack-generator-portable",
+      "originalAsset": "psx-industrial-pack-generator-portable"
+    },
+    {
+      "key": "DIGITAL_METER",
+      "path": "models/tools/digital_meter.glb",
+      "title": "Digital Meter",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "digital_meter.glb"
+    },
+    {
+      "key": "THERMOMETER_PROBE",
+      "path": "models/tools/thermometer_probe.glb",
+      "title": "Thermometer Probe",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "thermometer_probe.glb"
+    },
+    {
+      "key": "SCALE_PLATFORM",
+      "path": "models/tools/scale_platform.glb",
+      "title": "Scale Platform",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "scale_platform.glb"
+    },
+    {
+      "key": "CALIPER_SLIDE",
+      "path": "models/tools/caliper_slide.glb",
+      "title": "Caliper Slide",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "caliper_slide.glb"
+    },
+    {
+      "key": "PRESSURE_DIAL",
+      "path": "models/tools/pressure_dial.glb",
+      "title": "Pressure Dial",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pressure_dial.glb"
+    },
+    {
+      "key": "OPTICAL_MICROSCOPE",
+      "path": "models/tools/optical_microscope.glb",
+      "title": "Optical Microscope",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "optical_microscope.glb"
+    },
+    {
+      "key": "LAB_BEAKER",
+      "path": "models/tools/lab_beaker.glb",
+      "title": "Lab Beaker",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "lab_beaker.glb"
+    },
+    {
+      "key": "EXTINGUISHER_CYL",
+      "path": "models/tools/extinguisher_cyl.glb",
+      "title": "Extinguisher Cyl",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "extinguisher_cyl.glb"
+    },
+    {
+      "key": "FLASHLIGHT_TORCH",
+      "path": "models/tools/flashlight_torch.glb",
+      "title": "Flashlight Torch",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "flashlight_torch.glb"
+    },
+    {
+      "key": "WORKLIGHT_TRIPOD",
+      "path": "models/tools/worklight_tripod.glb",
+      "title": "Security light",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-security-light",
+      "originalAsset": "security-light"
+    },
+    {
+      "key": "DETECTOR_WAND",
+      "path": "models/tools/detector_wand.glb",
+      "title": "Detector Wand",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "detector_wand.glb"
+    },
+    {
+      "key": "MAGNET_HORSESHOE",
+      "path": "models/tools/magnet_horseshoe.glb",
+      "title": "Magnet Horseshoe",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "magnet_horseshoe.glb"
+    },
+    {
+      "key": "SUCTION_CUP_HANDLE",
+      "path": "models/tools/suction_cup_handle.glb",
+      "title": "Suction Cup Handle",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "suction_cup_handle.glb"
+    },
+    {
+      "key": "PULLEY_BLOCK",
+      "path": "models/tools/pulley_block.glb",
+      "title": "Pulley Block",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pulley_block.glb"
+    },
+    {
+      "key": "SPIRIT_LEVEL",
+      "path": "models/tools/spirit_level.glb",
+      "title": "Spirit Level",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "spirit_level.glb"
+    },
+    {
+      "key": "REINFORCED_CRATE",
+      "path": "models/containers/reinforced_crate.glb",
+      "title": "Reinforced Crate",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "reinforced_crate.glb"
+    },
+    {
+      "key": "WOOD_PALLET_CRATE",
+      "path": "models/containers/wood_pallet_crate.glb",
+      "title": "Medical supply crate",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-supply-crate",
+      "originalAsset": "supply-crate"
+    },
+    {
+      "key": "GLASS_CONTAINER",
+      "path": "models/containers/glass_container.glb",
+      "title": "Glass Container",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "glass_container.glb"
+    },
+    {
+      "key": "BARREL_DRUM",
+      "path": "models/containers/barrel_drum.glb",
+      "title": "Oil barrel",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-oil-barrel",
+      "originalAsset": "oil-barrel"
+    },
+    {
+      "key": "TREADED_TIRE",
+      "path": "models/mechanical/treaded_tire.glb",
+      "title": "Old tyre",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-old-tyre",
+      "originalAsset": "old-tyre"
+    },
+    {
+      "key": "GYRO_FLYWHEEL",
+      "path": "models/mechanical/gyro_flywheel.glb",
+      "title": "Gyro Flywheel",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "gyro_flywheel.glb"
+    },
+    {
+      "key": "SPRING_PISTON",
+      "path": "models/mechanical/spring_piston.glb",
+      "title": "Spring Piston",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "spring_piston.glb"
+    },
+    {
+      "key": "GEAR_WHEEL",
+      "path": "models/mechanical/gear_wheel.glb",
+      "title": "Gear Wheel",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "gear_wheel.glb"
+    },
+    {
+      "key": "AXLE_ROD",
+      "path": "models/mechanical/axle_rod.glb",
+      "title": "Axle Rod",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "axle_rod.glb"
+    },
+    {
+      "key": "SUSPENSION_BOGIE",
+      "path": "models/mechanical/suspension_bogie.glb",
+      "title": "Suspension Bogie",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "suspension_bogie.glb"
+    },
+    {
+      "key": "STEEL_IBEAM",
+      "path": "models/construction/steel_ibeam.glb",
+      "title": "Steel Ibeam",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "steel_ibeam.glb"
+    },
+    {
+      "key": "CONCRETE_MASONRY",
+      "path": "models/construction/concrete_masonry.glb",
+      "title": "Concrete Masonry",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "concrete_masonry.glb"
+    },
+    {
+      "key": "RAMP_WEDGE",
+      "path": "models/construction/ramp_wedge.glb",
+      "title": "Ramp Wedge",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "ramp_wedge.glb"
+    },
+    {
+      "key": "CENTRIFUGE_POD",
+      "path": "models/laboratory/centrifuge_pod.glb",
+      "title": "Centrifuge Pod",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "centrifuge_pod.glb"
+    },
+    {
+      "key": "LAB_CONSOLE",
+      "path": "models/laboratory/lab_console.glb",
+      "title": null,
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-sci-fi-computer-desk-console",
+      "originalAsset": "sci-fi-computer-desk-console"
+    },
+    {
+      "key": "LAB_TABLE",
+      "path": "models/laboratory/lab_table.glb",
+      "title": "Lab Table",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "lab_table.glb"
+    },
+    {
+      "key": "GEODESIC_SPHERE",
+      "path": "models/experimental/geodesic_sphere.glb",
+      "title": "Geodesic Sphere",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "geodesic_sphere.glb"
+    },
+    {
+      "key": "DOMINO_MONOLITH",
+      "path": "models/experimental/domino_monolith.glb",
+      "title": "Domino Monolith",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "domino_monolith.glb"
+    },
+    {
+      "key": "SOFT_FOAM_BLOCK",
+      "path": "models/experimental/soft_foam_block.glb",
+      "title": "Soft Foam Block",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "soft_foam_block.glb"
+    },
+    {
+      "key": "BUOYANCY_FLOAT",
+      "path": "models/experimental/buoyancy_float.glb",
+      "title": "Buoyancy Float",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "buoyancy_float.glb"
+    },
+    {
+      "key": "LAB_WORKBENCH",
+      "path": "models/furniture/lab_workbench.glb",
+      "title": "Lab Workbench",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "lab_workbench.glb"
+    },
+    {
+      "key": "OFFICE_CHAIR",
+      "path": "models/furniture/office_chair.glb",
+      "title": "Office Chair",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "office_chair.glb"
+    },
+    {
+      "key": "METAL_CABINET",
+      "path": "models/furniture/metal_cabinet.glb",
+      "title": "Metal Cabinet",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "metal_cabinet.glb"
+    },
+    {
+      "key": "WALL_CABINET",
+      "path": "models/furniture/wall_cabinet.glb",
+      "title": "Utility cabinet",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-utility-box-01",
+      "originalAsset": "utility-box-01"
+    },
+    {
+      "key": "BATTERY_UNIT",
+      "path": "models/electrical/battery_unit.glb",
+      "title": "Battery Unit",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "battery_unit.glb"
+    },
+    {
+      "key": "SWITCH_BOX",
+      "path": "models/electrical/switch_box.glb",
+      "title": "Power box, open",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-power-box-01",
+      "originalAsset": "power-box-01"
+    },
+    {
+      "key": "LIGHT_BULB_LAMP",
+      "path": "models/electrical/light_bulb_lamp.glb",
+      "title": "Pull-chain light socket",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-pull-chain-light-socket",
+      "originalAsset": "pull-chain-light-socket"
+    },
+    {
+      "key": "LED_INDICATOR",
+      "path": "models/electrical/led_indicator.glb",
+      "title": "Led Indicator",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "led_indicator.glb"
+    },
+    {
+      "key": "DC_MOTOR",
+      "path": "models/electrical/dc_motor.glb",
+      "title": "Dc Motor",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "dc_motor.glb"
+    },
+    {
+      "key": "KINETIC_GENERATOR",
+      "path": "models/electrical/kinetic_generator.glb",
+      "title": "psx industrial pack GeneratorPortable",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-psx-industrial-pack-generator-portable",
+      "originalAsset": "psx-industrial-pack-generator-portable"
+    },
+    {
+      "key": "FUSE_BLOCK",
+      "path": "models/electrical/fuse_block.glb",
+      "title": "Fuse Block",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "fuse_block.glb"
+    },
+    {
+      "key": "CIRCUIT_CONNECTOR",
+      "path": "models/electrical/circuit_connector.glb",
+      "title": "Circuit Connector",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "circuit_connector.glb"
+    },
+    {
+      "key": "ELECTRICAL_PANEL",
+      "path": "models/electrical/electrical_panel.glb",
+      "title": "Utility cabinet, double",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-utility-box-02",
+      "originalAsset": "utility-box-02"
+    },
+    {
+      "key": "SHELF_RACK",
+      "path": "models/environment/shelf_rack.glb",
+      "title": "Shelf Rack",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "shelf_rack.glb"
+    },
+    {
+      "key": "CONVEYOR_UNIT",
+      "path": "models/environment/conveyor_unit.glb",
+      "title": "Conveyor Unit",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "conveyor_unit.glb"
+    },
+    {
+      "key": "SHIPPING_CONTAINER",
+      "path": "models/environment/shipping_container.glb",
+      "title": "Shipping Container",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "shipping_container.glb"
+    },
+    {
+      "key": "SCAFFOLD_FRAME",
+      "path": "models/environment/scaffold_frame.glb",
+      "title": "Scaffold Frame",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "scaffold_frame.glb"
+    },
+    {
+      "key": "FLOOR_SLAB",
+      "path": "models/environment/floor_slab.glb",
+      "title": "Floor Slab",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "floor_slab.glb"
+    },
+    {
+      "key": "WALL_PANEL",
+      "path": "models/environment/wall_panel.glb",
+      "title": "Wall Panel",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "wall_panel.glb"
+    },
+    {
+      "key": "PILLAR_COLUMN",
+      "path": "models/environment/pillar_column.glb",
+      "title": "Pillar Column",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pillar_column.glb"
+    },
+    {
+      "key": "GLASS_PARTITION",
+      "path": "models/environment/glass_partition.glb",
+      "title": "Glass Partition",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "glass_partition.glb"
+    },
+    {
+      "key": "CRANE_BOOM",
+      "path": "models/environment/crane_boom.glb",
+      "title": "Crane Boom",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "crane_boom.glb"
+    },
+    {
+      "key": "CEILING_LIGHT",
+      "path": "models/environment/ceiling_light.glb",
+      "title": "Industrial wall lamp",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-industrial-wall-lamp",
+      "originalAsset": "industrial-wall-lamp"
+    },
+    {
+      "key": "DOOR_FRAME",
+      "path": "models/environment/door_frame.glb",
+      "title": "Door Frame",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "door_frame.glb"
+    },
+    {
+      "key": "WINDOW_FRAME",
+      "path": "models/environment/window_frame.glb",
+      "title": "Window Frame",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "window_frame.glb"
+    },
+    {
+      "key": "CNC_MACHINE",
+      "path": "models/environment/cnc_machine.glb",
+      "title": "Cnc Machine",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "cnc_machine.glb"
+    },
+    {
+      "key": "HYDRAULIC_PRESS",
+      "path": "models/environment/hydraulic_press.glb",
+      "title": "Hydraulic Press",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "hydraulic_press.glb"
+    },
+    {
+      "key": "ROOF_TRUSS",
+      "path": "models/environment/roof_truss.glb",
+      "title": "Roof Truss",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "roof_truss.glb"
+    },
+    {
+      "key": "STAIR_FLIGHT",
+      "path": "models/environment/stair_flight.glb",
+      "title": "Stair Flight",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "stair_flight.glb"
+    },
+    {
+      "key": "PIPE_CONDUIT",
+      "path": "models/environment/pipe_conduit.glb",
+      "title": "Pipe Conduit",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "pipe_conduit.glb"
+    },
+    {
+      "key": "SAFETY_RAIL",
+      "path": "models/environment/safety_rail.glb",
+      "title": "Safety Rail",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "safety_rail.glb"
+    },
+    {
+      "key": "WARNING_STRIPE_CURB",
+      "path": "models/environment/warning_stripe_curb.glb",
+      "title": "Concrete barrier, striped",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-concrete-road-barrier-02",
+      "originalAsset": "concrete-road-barrier-02"
+    },
+    {
+      "key": "CEILING_VENT",
+      "path": "models/environment/ceiling_vent.glb",
+      "title": "Exterior AC units (clean and rusted)",
+      "source": "Source 2 \u2014 Summer Engine Library",
+      "creator": "goldenranger915",
+      "license": "MIT",
+      "sourceUrl": "https://www.summerengine.com/asset-store/library-exterior-aircon-unit",
+      "originalAsset": "exterior-aircon-unit"
+    },
+    {
+      "key": "OPERATOR_HIGH",
+      "path": "characters/operator_high.glb",
+      "title": "Laboratory Operator Rig (High LOD)",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "operator_high.glb"
+    },
+    {
+      "key": "OPERATOR_MED",
+      "path": "characters/operator_med.glb",
+      "title": "Laboratory Operator Rig (Medium LOD)",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "operator_med.glb"
+    },
+    {
+      "key": "OPERATOR_LOW",
+      "path": "characters/operator_low.glb",
+      "title": "Laboratory Operator Rig (Low LOD)",
+      "source": "KineticLab 3D Original Procedural Assets",
+      "creator": "KineticLab 3D Pipeline",
+      "license": "Project Built-in",
+      "sourceUrl": "local://kineticlab3d",
+      "originalAsset": "operator_low.glb"
+    },
+    {
+      "key": "KARAKTER_COMPANION",
+      "path": "characters/karakter_companion.glb",
+      "title": "Tactical Companion Character Rig",
+      "source": "Source 1 \u2014 Firearm & Character Archive",
+      "creator": "vhh2qy.zip Archive Contributor",
+      "license": "Provided User Archive",
+      "sourceUrl": "https://files.catbox.moe/vhh2qy.zip",
+      "originalAsset": "karakter.glb"
+    }
+  ]
+}

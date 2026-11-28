@@ -1,0 +1,6 @@
+{
+  "name": "KineticLab 3D",
+  "description": "A multi-threaded 3D physics sandbox featuring OpenGL ES 3.0 PBR rendering, rigid-body dynamics, constraints, interactive tools, and seven playable environments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

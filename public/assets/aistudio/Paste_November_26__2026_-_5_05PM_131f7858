@@ -1,0 +1,2022 @@
+PHASE 7 — COMPLETE 3D ENGINE, CHARACTER, GLB ASSET, FIREARM VISUALS, ANIMATION & PREVIEW RECONSTRUCTION
+
+PROJECT CONTEXT
+
+Continue developing the existing 3D physics sandbox game.
+
+Technology Stack
+
+- Kotlin.
+- Android Jetpack.
+- OpenGL ES.
+- GLB / glTF 2.0.
+- Existing physics engine.
+- Android and PC support.
+
+This is a major reconstruction and quality improvement phase.
+
+The current game has serious problems:
+
+1. The 3D viewport sometimes becomes completely black.
+2. Many objects have no working 3D preview.
+3. Character models look artificial and poorly assembled.
+4. Character proportions do not look human.
+5. Character animations are stiff and unnatural.
+6. Character hands do not properly align with held objects.
+7. Objects sometimes intersect with the character's hands.
+8. Character customization preview is unreliable.
+9. Maps contain missing roofs, incorrectly aligned walls, and incomplete structures.
+10. Some environmental objects have incorrect positioning.
+11. Materials and textures need further improvement.
+12. The UI panels are too opaque and visually obstructive.
+13. Existing GLB asset handling needs improvement.
+14. Firearms and their gameplay animations need to be implemented.
+
+The goal is to deliver a visually convincing, technically stable, and fully playable 3D sandbox.
+
+STRICT DEVELOPMENT RULES
+
+- Work on the existing project.
+- Preserve existing functionality.
+- Preserve all seven maps.
+- Preserve existing tools and materials.
+- Preserve existing physics systems.
+- Do not replace functional systems with placeholders.
+- Do not remove existing features.
+- Do not generate primitive placeholder models as final assets.
+- Do not use static screenshots as substitutes for 3D previews.
+- Do not hide rendering errors.
+- Do not sacrifice performance.
+- Do not redesign the existing gameplay HUD.
+- Do not claim that an unfinished feature is complete.
+
+All changes must be implemented in the actual application.
+
+---
+
+PART 1 — FIX BLACK SCREEN AND OPENGL RENDERING
+
+1.1 Critical Rendering Investigation
+
+The application sometimes displays a completely black gameplay screen.
+
+Investigate the underlying rendering pipeline.
+
+Inspect:
+
+- EGL initialization.
+- OpenGL ES context creation.
+- Surface lifecycle.
+- Framebuffer allocation.
+- Render target configuration.
+- Color buffers.
+- Depth buffers.
+- Viewport dimensions.
+- Shader compilation.
+- Shader linking.
+- Texture loading.
+- Mesh buffer initialization.
+- Camera matrices.
+- Projection matrices.
+- Model matrices.
+- Render pass ordering.
+- GPU resource management.
+
+Do not simply add a temporary black-screen workaround.
+
+Find and fix the actual cause.
+
+1.2 EGL Lifecycle Management
+
+Handle:
+
+- Application launch.
+- Activity pause.
+- Activity resume.
+- Surface creation.
+- Surface destruction.
+- EGL context loss.
+- EGL context recreation.
+- Scene switching.
+- Map loading.
+- Preview initialization.
+
+When an EGL context is recreated, restore all required GPU resources.
+
+Do not assume that previous GPU resources remain valid.
+
+1.3 Shader Reliability
+
+Implement proper shader validation.
+
+If a shader fails:
+
+- Record the compilation error.
+- Identify the affected shader.
+- Provide diagnostic information.
+- Use a safe fallback shader where possible.
+
+One broken material shader must not make the entire scene black.
+
+1.4 Rendering Diagnostics
+
+Add a development diagnostic system displaying:
+
+- Renderer status.
+- EGL status.
+- FPS.
+- Frame time.
+- Shader errors.
+- Texture loading errors.
+- Model loading errors.
+- Framebuffer status.
+- GPU resource status.
+
+Do not silently ignore rendering failures.
+
+1.5 Black Screen Acceptance Criteria
+
+Test:
+
+- Initial startup.
+- Main menu.
+- Character customization.
+- Every map.
+- Gameplay.
+- Inventory.
+- Object preview.
+- Tool preview.
+- Weapon preview.
+- Pause and resume.
+- Repeated map switching.
+
+No unexplained black screens.
+
+---
+
+PART 2 — UNIVERSAL GLB ASSET PIPELINE
+
+2.1 GLB as the Standard 3D Format
+
+All visible 3D assets must use GLB as the standard model format.
+
+Use glTF 2.0 compatibility.
+
+This includes:
+
+- Player characters.
+- Character clothing.
+- Tools.
+- Firearms.
+- Furniture.
+- Laboratory equipment.
+- Industrial equipment.
+- Electrical objects.
+- Environmental assets.
+- Interactive objects.
+
+Do not use primitive shapes as final visible models for complex objects.
+
+Primitive shapes are allowed for internal collision geometry.
+
+2.2 GLB Loader
+
+Improve the existing GLB loader.
+
+Support:
+
+- Multiple meshes.
+- Multiple materials.
+- Multiple primitives.
+- Scene hierarchy.
+- Node transforms.
+- PBR materials.
+- Embedded textures.
+- Normal maps.
+- Metallic maps.
+- Roughness maps.
+- UV coordinates.
+- Skinning.
+- Skeletons.
+- Animation clips.
+- Morph targets where supported.
+
+Ensure imported assets preserve their original hierarchy.
+
+2.3 Model Quality Requirements
+
+Every major model must have:
+
+- Correct proportions.
+- Appropriate topology.
+- Correct normals.
+- Proper UV mapping.
+- Consistent scale.
+- Correct orientation.
+- Proper material assignment.
+- Realistic surface appearance.
+- Appropriate polygon density.
+
+Avoid:
+
+- Missing textures.
+- Stretched textures.
+- Incorrect normals.
+- Unnecessary geometry.
+- Detached mesh components.
+- Incorrect model pivots.
+
+2.4 Asset Organization
+
+Organize the asset library consistently.
+
+assets/
+models/
+characters/
+character_clothing/
+firearms/
+tools/
+furniture/
+laboratory/
+industrial/
+electrical/
+environment/
+materials/
+textures/
+animations/
+thumbnails/
+
+Every asset must have a unique identifier and proper metadata.
+
+2.5 Asset Validation
+
+Validate every imported GLB.
+
+Check:
+
+- File integrity.
+- Scene hierarchy.
+- Mesh availability.
+- Material references.
+- Texture references.
+- Bounding boxes.
+- Transform values.
+- Scale.
+- Animation compatibility.
+- Polygon count.
+
+Provide clear errors for invalid assets.
+
+---
+
+PART 3 — UNIVERSAL OBJECT PREVIEW SYSTEM
+
+THIS IS A CRITICAL REQUIREMENT.
+
+All objects must have a functioning 3D preview.
+
+Currently, many objects are invisible or have no proper preview.
+
+Rebuild the preview system.
+
+3.1 Real 3D Preview
+
+Every preview must display the actual GLB model.
+
+Do not substitute the preview with:
+
+- Static screenshots.
+- Generic icons.
+- Blank panels.
+- Placeholder cubes.
+- Empty render targets.
+
+3.2 Automatic Camera Framing
+
+Calculate the model bounding box automatically.
+
+Use it to determine:
+
+- Model center.
+- Model dimensions.
+- Camera distance.
+- Camera target.
+- Near clipping plane.
+- Far clipping plane.
+
+Ensure every model fits correctly.
+
+Small objects must not appear excessively tiny.
+
+Large objects must not be cropped.
+
+Tall objects must remain visible.
+
+Wide objects must be framed correctly.
+
+3.3 Preview Lighting
+
+Create a dedicated preview lighting system.
+
+Include:
+
+- Key lighting.
+- Fill lighting.
+- Rim lighting.
+- Neutral environment lighting.
+- Proper shadow handling.
+- PBR material response.
+
+White objects must remain distinguishable from the background.
+
+Dark objects must remain visible.
+
+Avoid overexposure.
+
+3.4 Preview Interaction
+
+Support:
+
+- Touch rotation.
+- Mouse rotation.
+- Pinch zoom.
+- Mouse-wheel zoom.
+- Reset camera.
+- Inspect different angles.
+
+Preview input must not trigger gameplay input underneath.
+
+3.5 Preview Generation
+
+When an asset is registered:
+
+1. Validate the GLB.
+2. Load the actual model.
+3. Calculate its bounding box.
+4. Initialize its preview scene.
+5. Configure the camera.
+6. Apply preview lighting.
+7. Render the model.
+8. Generate a thumbnail.
+9. Cache the preview.
+10. Register the interactive preview.
+
+3.6 Preview Coverage
+
+The system must support every category:
+
+- All existing tools.
+- All materials with 3D representations.
+- Furniture.
+- Laboratory objects.
+- Industrial objects.
+- Electrical objects.
+- Firearms.
+- Character models.
+- Clothing.
+- Accessories.
+- Spawnable objects.
+
+No category should contain permanently broken previews.
+
+3.7 Preview Optimization
+
+Implement:
+
+- On-demand preview rendering.
+- Thumbnail caching.
+- Model caching.
+- Texture caching.
+- GPU resource reuse.
+- Preview scene cleanup.
+- Lazy loading.
+
+Do not render every inventory item in full quality simultaneously.
+
+Use thumbnails for unselected items and the real interactive 3D model for the selected item.
+
+---
+
+PART 4 — COMPLETE HUMAN CHARACTER RECONSTRUCTION
+
+The existing character does not look convincingly human.
+
+Rebuild the character model and skeletal integration.
+
+Do not merely increase polygon counts.
+
+4.1 Human Proportions
+
+Create a coherent human character.
+
+Improve:
+
+- Head proportions.
+- Neck.
+- Shoulders.
+- Chest.
+- Torso.
+- Pelvis.
+- Arms.
+- Elbows.
+- Forearms.
+- Wrists.
+- Hands.
+- Fingers.
+- Thighs.
+- Knees.
+- Lower legs.
+- Ankles.
+- Feet.
+
+All body parts must be connected naturally.
+
+No visible gaps.
+
+No floating hands.
+
+No detached limbs.
+
+No incorrectly aligned joints.
+
+No unnatural body proportions.
+
+4.2 Character Mesh
+
+Use a properly constructed skinned mesh.
+
+Implement:
+
+- Skeleton hierarchy.
+- Skin weights.
+- Correct bind pose.
+- Joint deformation.
+- Normal correction.
+- Smooth mesh transitions.
+- Proper clothing attachment.
+
+Avoid visible intersections between body parts.
+
+4.3 Face Reconstruction
+
+Improve:
+
+- Eyes.
+- Eyelids.
+- Eyebrows.
+- Nose.
+- Mouth.
+- Ears.
+- Jaw.
+- Facial proportions.
+
+The character must have a recognizable human face.
+
+Avoid blank mannequin faces.
+
+4.4 Clothing Reconstruction
+
+Create detailed industrial clothing.
+
+Include:
+
+- Jacket.
+- Shirt.
+- Trousers.
+- Belt.
+- Gloves.
+- Boots.
+- Pockets.
+- Seams.
+- Zippers.
+- Fabric folds.
+- Collar.
+- Sleeves.
+
+Use proper fabric materials and textures.
+
+Do not use flat white materials as final clothing.
+
+4.5 Character Customization
+
+Fix the customization preview.
+
+Requirements:
+
+- Full-body visibility.
+- Proper camera framing.
+- Correct character orientation.
+- Proper lighting.
+- Visible face.
+- Correct floor contact.
+- No clipping.
+- No model/UI overlap.
+
+Changing clothing or appearance must update the 3D preview immediately.
+
+Confirm & Apply must update the actual player character.
+
+---
+
+PART 5 — CHARACTER ANIMATION RECONSTRUCTION
+
+The existing player animations are stiff and unnatural.
+
+Rebuild the animation state system.
+
+5.1 Required Animations
+
+Implement:
+
+- Idle.
+- Walking.
+- Running.
+- Sprinting.
+- Turning.
+- Jumping.
+- Falling.
+- Landing.
+- Crouching.
+- Standing up.
+- Object pickup.
+- Object holding.
+- Object release.
+- Tool holding.
+- Tool interaction.
+- Firearm idle.
+- Firearm aiming.
+- Firearm firing animation.
+- Firearm reload animation.
+- Weapon switching.
+
+5.2 Animation Blending
+
+Implement smooth transitions.
+
+Avoid abrupt animation switching.
+
+Use proper animation state management.
+
+Character movement must match actual velocity.
+
+Prevent:
+
+- Foot sliding.
+- Floating feet.
+- Frozen animations.
+- Incorrect limb rotations.
+- Animation snapping.
+- Unnatural torso movement.
+
+5.3 Animation Synchronization
+
+Synchronize:
+
+- Character movement.
+- Physics state.
+- Hand IK.
+- Object attachments.
+- Tool interaction.
+- Weapon animations.
+
+The character must not animate independently of actual gameplay actions.
+
+---
+
+PART 6 — HAND IK, GRIP SYSTEM AND OBJECT ATTACHMENTS
+
+THIS IS ONE OF THE MOST IMPORTANT CHARACTER FIXES.
+
+The character's hands currently do not properly connect with held objects.
+
+Sometimes the hands penetrate the object.
+
+Sometimes the hands are too far away.
+
+Sometimes the grip looks disconnected.
+
+Rebuild the hand interaction system.
+
+6.1 Hand IK
+
+Implement an IK system for both hands.
+
+Support:
+
+- Left hand.
+- Right hand.
+- Elbow positioning.
+- Wrist alignment.
+- Finger pose.
+- Shoulder compensation.
+
+Use the existing character skeleton.
+
+6.2 Grip Attachments
+
+Every holdable object must have properly defined attachment points.
+
+Examples:
+
+- Handle attachment.
+- Grip attachment.
+- Secondary hand attachment.
+- Tool holding attachment.
+- Generic object holding attachment.
+
+Store attachment transforms in the asset metadata.
+
+Use them to align the character's hands with objects.
+
+6.3 Correct Grip Alignment
+
+When holding an object:
+
+- The hand must reach the correct attachment point.
+- The wrist must align naturally.
+- The fingers must form an appropriate grip pose.
+- The elbow must bend naturally.
+- The arm must not stretch unnaturally.
+- The object must not penetrate the palm.
+- The hand must not float away from the object.
+
+Avoid excessive wrist rotation.
+
+Avoid incorrect finger positioning.
+
+6.4 Two-Handed Object Handling
+
+For larger objects, support both hands.
+
+The primary hand controls the main attachment.
+
+The secondary hand follows a secondary attachment point.
+
+Maintain natural arm proportions.
+
+Prevent the two hands from intersecting each other.
+
+6.5 No-Object Holding State
+
+When the player is not holding anything:
+
+- Both hands return to a natural resting pose.
+- Fingers remain properly articulated.
+- Arms remain relaxed.
+- Wrists remain aligned.
+- Hands do not remain stuck in gripping poses.
+
+When switching from holding to empty-handed:
+
+Blend smoothly into the empty-hand pose.
+
+6.6 Tool-Specific Grip Poses
+
+Support different grip poses for:
+
+- Hammers.
+- Wrenches.
+- Screwdrivers.
+- Drills.
+- Welding equipment.
+- Measuring instruments.
+- Firearms.
+
+Use suitable hand poses for each object category.
+
+Do not use one identical pose for every object.
+
+6.7 IK Validation
+
+Test the following:
+
+1. Pick up a small object.
+2. Pick up a large object.
+3. Hold a tool.
+4. Hold a two-handed object.
+5. Switch objects.
+6. Release an object.
+7. Move while holding an object.
+8. Rotate the camera while holding an object.
+9. Switch to empty hands.
+10. Switch between different tool categories.
+
+No visibly broken grip alignment.
+
+---
+
+PART 7 — ADD SIX REAL-WORLD-STYLE FIREARM CATEGORIES
+
+IMPORTANT VISUAL DIRECTION
+
+Add six categories of recognizable, real-world-inspired firearms.
+
+These are virtual game assets, not functional weapon replicas.
+
+The visual models should have realistic exterior proportions, recognizable silhouettes, detailed surfaces, and high-quality GLB construction.
+
+Do not create fantasy weapons.
+
+Do not create futuristic energy weapons.
+
+Do not create toy-like weapons.
+
+Do not create generic cubes with a gun-shaped silhouette.
+
+Use appropriate fictional game implementations for internal mechanics rather than reproducing real firearm engineering.
+
+7.1 Six Firearm Categories
+
+Implement these six categories:
+
+1. Glock 18-Inspired Machine Pistol
+
+Visual direction:
+
+- Recognizable compact polymer-pistol silhouette.
+- Detailed exterior body.
+- Properly modeled grip.
+- Visible external controls as visual details.
+- Realistic surface materials.
+- Appropriate proportions.
+
+Use the Glock 18 as a visual reference for the exterior appearance.
+
+2. Standard Service Pistol
+
+Visual direction:
+
+- Professional service-pistol appearance.
+- Detailed frame.
+- Realistic grip texture.
+- Detailed exterior finish.
+- Proper proportions.
+
+3. MP5-Inspired Submachine Gun
+
+Visual direction:
+
+- Recognizable compact submachine-gun silhouette.
+- Detailed exterior body.
+- Realistic metal and polymer materials.
+- Proper visual proportions.
+- Detailed furniture and accessories.
+
+4. M4A1-Inspired Carbine
+
+Visual direction:
+
+- Recognizable modern carbine silhouette.
+- Detailed exterior geometry.
+- Realistic polymer and metal finishes.
+- Properly modeled handguard.
+- Detailed stock.
+- Appropriate attachment aesthetics.
+
+5. Pump-Action Shotgun
+
+Visual direction:
+
+- Realistic shotgun silhouette.
+- Detailed exterior finish.
+- Proper stock appearance.
+- Detailed fore-end.
+- Metal and polymer material variation.
+
+6. Bolt-Action Sniper Rifle
+
+Visual direction:
+
+- Long precision-rifle silhouette.
+- Detailed stock.
+- Realistic exterior finish.
+- Detailed scope as a visual component.
+- Appropriate proportions.
+
+These are visual game models only. Do not reproduce internal operating mechanisms or real-world weapon construction instructions.
+
+7.2 Firearm Model Quality
+
+Every firearm must be a detailed GLB model.
+
+Requirements:
+
+- Proper exterior geometry.
+- Clean topology.
+- Correct normals.
+- Proper UV mapping.
+- PBR materials.
+- Realistic material roughness.
+- Appropriate metallic appearance.
+- Detailed grips.
+- Proper component alignment.
+- Correct model scale.
+- Proper pivot.
+- Correct hand attachment points.
+
+Do not use generic primitive models as final firearm assets.
+
+7.3 Firearm Textures
+
+Use appropriate material variation:
+
+- Polymer.
+- Metal.
+- Rubber.
+- Matte surfaces.
+- Coated metal.
+- Glass for suitable optical components.
+
+Avoid excessive shine.
+
+Avoid completely flat materials.
+
+Avoid random camouflage unless intentionally selected.
+
+7.4 Firearm Preview
+
+Every firearm must have a fully functional interactive 3D preview.
+
+Show the complete model.
+
+Allow the user to:
+
+- Rotate.
+- Zoom.
+- Inspect the exterior.
+- Reset the camera.
+
+Do not crop the model.
+
+Do not display blank preview panels.
+
+---
+
+PART 8 — FIREARM GAMEPLAY ANIMATIONS AND RECOIL
+
+Implement polished, game-specific animations.
+
+All firing and recoil behavior must be virtual gameplay animation, not a simulation of real-world firearm operation.
+
+8.1 Required Animations
+
+Implement:
+
+- Weapon idle.
+- Weapon draw.
+- Weapon holster.
+- Weapon switching.
+- Aiming.
+- Firing animation.
+- Reload animation.
+- Inspection animation.
+- Lowering weapon.
+- Returning to idle.
+
+Animations must blend smoothly.
+
+8.2 Visual Recoil
+
+Implement a configurable visual recoil system.
+
+Requirements:
+
+- Small camera impulse.
+- Weapon model movement.
+- Smooth recovery.
+- Animation synchronization.
+- Per-category visual tuning.
+- Adjustable intensity.
+- Adjustable camera response.
+
+The recoil is an abstract gameplay effect.
+
+Do not attempt to reproduce real-world ballistic or mechanical behavior.
+
+8.3 Weapon Viewmodel
+
+Create a properly integrated first-person weapon presentation.
+
+The model must:
+
+- Remain correctly positioned.
+- Follow the camera consistently.
+- Avoid excessive screen coverage.
+- Avoid clipping through the camera.
+- Avoid floating independently.
+- Maintain proper proportions.
+
+The weapon must not obstruct most of the player's view.
+
+8.4 Third-Person Character Holding
+
+When viewed in third person:
+
+- Both hands must align with the appropriate attachment points.
+- Arms must use IK.
+- Wrist positions must remain natural.
+- Shoulder movement must be correct.
+- Weapon placement must remain consistent.
+
+Do not let the weapon float in front of the character.
+
+Do not let the character hold it with disconnected hands.
+
+8.5 Gameplay Integration
+
+Integrate firearms with:
+
+- Inventory.
+- Tool selection.
+- Weapon preview.
+- Object attachment system.
+- Character animation.
+- Audio feedback.
+- Save/load system.
+
+Preserve the existing sandbox object interaction system.
+
+---
+
+PART 9 — MAP ARCHITECTURE RECONSTRUCTION
+
+All seven maps must be audited.
+
+The current architecture has visible problems:
+
+- Missing roofs.
+- Incomplete ceilings.
+- Misaligned walls.
+- Incorrect wall connections.
+- Floating objects.
+- Intersecting structures.
+- Incorrect door placement.
+- Inconsistent floor levels.
+
+Do not solve these problems by adding random decorations.
+
+Fix the actual geometry.
+
+9.1 Structural Validation
+
+For every map, inspect:
+
+- Floors.
+- Walls.
+- Ceilings.
+- Roofs.
+- Doors.
+- Windows.
+- Columns.
+- Beams.
+- Stairs.
+- Railings.
+- Structural supports.
+
+Every building must have a coherent architectural structure.
+
+9.2 Roof and Ceiling System
+
+Ensure all intended enclosed spaces have complete roofs or ceilings.
+
+Check:
+
+- Roof coverage.
+- Roof alignment.
+- Ceiling height.
+- Structural connections.
+- Wall-to-ceiling intersections.
+- Missing geometry.
+
+Do not leave unexplained holes.
+
+Open ceilings are acceptable only when intentionally designed.
+
+9.3 Wall Alignment
+
+Walls must:
+
+- Meet correctly at corners.
+- Align with floors.
+- Align with ceilings.
+- Have consistent thickness.
+- Avoid visible gaps.
+- Avoid excessive intersections.
+
+Doors and windows must fit their openings.
+
+9.4 Placement Validation
+
+Implement scene validation for:
+
+- Object positions.
+- Object rotations.
+- Object scale.
+- Floor contact.
+- Wall contact.
+- Structural alignment.
+- Collision geometry.
+
+Use bounding boxes and collision queries.
+
+9.5 Materials and Textures
+
+All seven maps must use suitable PBR materials.
+
+Include:
+
+- Concrete.
+- Metal.
+- Glass.
+- Wood.
+- Asphalt.
+- Tiles.
+- Industrial flooring.
+- Painted surfaces.
+
+Avoid excessive white environments.
+
+Prevent missing textures.
+
+Prevent stretched UVs.
+
+9.6 Lighting
+
+Improve:
+
+- Directional lighting.
+- Point lights.
+- Spotlights.
+- Ambient lighting.
+- Shadow maps.
+- Reflection handling.
+- Exposure.
+
+Avoid overexposure and completely dark rooms.
+
+---
+
+PART 10 — UI TRANSPARENCY IMPROVEMENTS
+
+IMPORTANT: Preserve the existing HUD layout.
+
+Do not move or resize:
+
+- Joystick.
+- Jump button.
+- Action buttons.
+- Top information panel.
+- Bottom toolbar.
+- Existing gameplay controls.
+
+Only improve the appearance of relevant panels.
+
+10.1 Panel Backgrounds
+
+Make UI panels slightly transparent.
+
+Use subtle dark translucent surfaces.
+
+Requirements:
+
+- Background opacity approximately 80–90% where readability requires it.
+- Clear text contrast.
+- Subtle borders.
+- Consistent appearance.
+- Proper layering.
+
+Do not make panels completely transparent.
+
+10.2 Preview Panels
+
+The character customization and object preview panels must have restrained transparency.
+
+The 3D model must remain clearly visible.
+
+Do not let the panel background obscure the model.
+
+10.3 UI Consistency
+
+Maintain:
+
+- Existing orange accent.
+- Dark charcoal interface.
+- Existing icon language.
+- Existing HUD positioning.
+- Existing button behavior.
+
+Do not redesign the entire interface.
+
+---
+
+PART 11 — PERFORMANCE OPTIMIZATION
+
+The application must not execute every workload on one thread.
+
+Use a managed architecture.
+
+11.1 Thread Responsibilities
+
+Android Main Thread
+
+- Android lifecycle.
+- Lightweight UI interactions.
+- Navigation.
+- Settings.
+- Input dispatch.
+
+Render Thread
+
+- OpenGL rendering.
+- Camera.
+- Mesh rendering.
+- Shader operations.
+- GPU resource management.
+
+Physics Worker
+
+- Rigid body simulation.
+- Collision processing.
+- Physics constraints.
+- Object state updates.
+
+Animation Worker
+
+- Animation evaluation.
+- Skeletal transforms.
+- IK.
+- Pose blending.
+
+Asset Workers
+
+- GLB loading.
+- Texture decoding.
+- Mesh processing.
+- Material preparation.
+- Asset validation.
+
+Background Save Worker
+
+- Scene serialization.
+- Save files.
+- Autosave.
+- Loading.
+
+11.2 Thread Safety
+
+Use:
+
+- Kotlin Coroutines.
+- ExecutorService.
+- Thread-safe queues.
+- Immutable snapshots.
+- Double buffering.
+- Atomic state exchange.
+
+Avoid:
+
+- Race conditions.
+- Deadlocks.
+- Excessive locks.
+- Uncontrolled thread creation.
+- Main-thread blocking.
+
+OpenGL context operations must remain on the valid context-owning render thread.
+
+11.3 Rendering Optimization
+
+Implement:
+
+- Frustum culling.
+- LOD.
+- Instanced rendering.
+- Mesh batching.
+- Texture caching.
+- Resource reuse.
+- Draw-call reduction.
+- Shadow distance controls.
+- On-demand preview rendering.
+
+11.4 Physics Optimization
+
+Implement:
+
+- Broad-phase collision detection.
+- Spatial partitioning.
+- Sleeping bodies.
+- Collision filtering.
+- Fixed timestep.
+- Efficient constraint handling.
+
+11.5 Memory Management
+
+Implement:
+
+- Asset caching.
+- GLB resource reuse.
+- Texture unloading.
+- Preview cleanup.
+- Mesh pooling where appropriate.
+- Safe scene destruction.
+
+Prevent memory leaks when switching maps or previews.
+
+---
+
+PART 12 — MOBILE AND PC COMPATIBILITY
+
+Android
+
+Support:
+
+- Landscape orientation.
+- Immersive fullscreen.
+- Touch camera controls.
+- Responsive UI.
+- Object preview gestures.
+- Weapon preview gestures.
+- Character customization.
+
+PC
+
+Support:
+
+- Keyboard.
+- Mouse.
+- Mouse camera control.
+- Fullscreen.
+- Windowed mode.
+- Object preview using mouse.
+- Character customization.
+
+Maintain consistent gameplay behavior across both platforms.
+
+---
+
+PART 13 — REGRESSION TESTING
+
+Test the actual running application.
+
+Rendering
+
+- No black screen.
+- No missing shaders.
+- No invisible models.
+- No broken framebuffers.
+
+GLB
+
+- Correct loading.
+- Correct scale.
+- Correct materials.
+- Correct hierarchy.
+- Correct animations.
+
+Object Preview
+
+- All categories work.
+- Correct camera framing.
+- Correct lighting.
+- Touch rotation.
+- Mouse rotation.
+- No black preview.
+
+Character
+
+- Human appearance.
+- Correct proportions.
+- Connected body.
+- Natural animations.
+- Correct clothing.
+- Correct facial appearance.
+
+Hands
+
+- Empty-hand pose.
+- Single-hand grip.
+- Two-hand grip.
+- Tool grip.
+- Firearm grip.
+- Object pickup.
+- Object release.
+- No clipping.
+- No floating hands.
+- No unnatural arm stretching.
+
+Firearms
+
+- Six categories implemented.
+- Detailed GLB models.
+- Working previews.
+- Correct inventory integration.
+- Functional animation states.
+- Visual recoil.
+- Proper first-person presentation.
+- Correct third-person grip.
+
+Maps
+
+- All seven maps.
+- Complete architecture.
+- Correct roofs.
+- Correct ceilings.
+- Correct walls.
+- Correct floors.
+- Proper lighting.
+- Correct collision.
+
+Performance
+
+- FPS.
+- Frame time.
+- Memory.
+- Loading time.
+- Preview performance.
+- Physics performance.
+- Map switching.
+
+---
+
+PART 14 — FINAL ACCEPTANCE CRITERIA
+
+The phase is complete only when all conditions are satisfied.
+
+Rendering
+
+- No unexplained black screens.
+- Stable OpenGL lifecycle.
+- Proper error reporting.
+
+GLB
+
+- GLB is the standard format for visible 3D assets.
+- Proper PBR materials.
+- Correct model hierarchy.
+- Validated assets.
+
+Object Preview
+
+- Every supported object category has a working 3D preview.
+- Actual models are displayed.
+- Automatic framing works.
+- Rotation and zoom work.
+- Preview caching works.
+
+Character
+
+- Convincing human proportions.
+- Proper face.
+- Detailed clothing.
+- Correct skeleton.
+- Natural animations.
+
+Hand IK
+
+- Correct grip alignment.
+- Proper finger positioning.
+- No object penetration.
+- No floating hands.
+- Natural empty-hand pose.
+- Correct two-handed interactions.
+
+Firearms
+
+- Six recognizable real-world-style categories.
+- Detailed exterior GLB models.
+- Proper 3D previews.
+- Working visual recoil.
+- Proper animation.
+- Functional inventory integration.
+
+Maps
+
+- All seven maps remain playable.
+- No unexplained missing roofs.
+- No misaligned walls.
+- No floating structures.
+- Proper textures.
+- Proper lighting.
+
+UI
+
+- Existing HUD layout preserved.
+- Slightly transparent panels.
+- Proper text readability.
+- Character and object previews remain visible.
+
+Performance
+
+- Workloads separated appropriately.
+- No heavy operations on the UI thread.
+- Stable rendering.
+- Efficient resource management.
+
+---
+
+FINAL DEVELOPMENT REPORT
+
+After implementation, provide:
+
+1. Black-screen root cause and fix.
+2. OpenGL lifecycle improvements.
+3. GLB loader implementation.
+4. Number of validated GLB assets.
+5. Object preview coverage.
+6. Preview loading performance.
+7. Character reconstruction details.
+8. Character animation implementation.
+9. Hand IK implementation.
+10. Grip attachment validation.
+11. Six firearm categories implemented.
+12. Firearm animation status.
+13. Visual recoil implementation.
+14. Seven-map architecture audit.
+15. UI transparency changes.
+16. Multithreading architecture.
+17. FPS before and after optimization.
+18. Memory measurements.
+19. Remaining bugs.
+20. Build and installation test results.
+
+Never fabricate performance measurements or claim that a feature has been tested when it has not.
+
+If a feature remains incomplete, identify it clearly.
+
+FINAL OBJECTIVE
+
+Deliver a professional 3D physics sandbox with:
+
+- Reliable OpenGL rendering.
+- Detailed GLB assets.
+- Fully functioning 3D previews.
+- Convincing human character models.
+- Natural character animation.
+- Accurate hand-to-object alignment.
+- Six detailed real-world-style firearm visual categories.
+- Polished game-specific firing and recoil animations.
+- Complete and correctly aligned environments.
+- Professional translucent UI panels.
+- Optimized Android and PC performance.
+
+Prioritize actual implementation, visual quality, animation consistency, and technical stability.
+
+Do not prioritize superficial screenshots over working game systems.
+
+
+PHASE 7 ADDENDUM — FIREARM GAMEPLAY, AMMO BOX SYSTEM & ENVIRONMENT VISUAL RECONSTRUCTION
+
+Continue from the existing PHASE 7 implementation.
+
+Do not replace the previous requirements.
+
+This is an additional implementation specification covering firearm gameplay functionality, ammunition pickups, detailed 3D assets, and environmental material quality.
+
+PART 15 — COMPLETE PLAYABLE FIREARM GAMEPLAY
+
+15.1 Actual Gameplay Functionality
+
+The six existing firearm categories must be fully integrated into playable gameplay.
+
+They must not be decorative inventory objects.
+
+Implement functional game-only systems for:
+
+- Aim.
+- Shooting.
+- Reloading.
+- Ammunition tracking.
+- Weapon switching.
+- Weapon animations.
+- Visual recoil.
+- Shooting feedback.
+- Ammunition pickups.
+- Weapon state management.
+
+All mechanics must remain virtual game systems and must not reproduce real-world weapon operation procedures.
+
+15.2 AIMING SYSTEM
+
+Implement a responsive aiming system.
+
+Requirements:
+
+- Dedicated aim button on mobile.
+- Mouse aiming support on PC.
+- Smooth transition into aiming mode.
+- Smooth return to normal view.
+- Proper camera alignment.
+- Proper weapon viewmodel positioning.
+- Adjustable aim sensitivity.
+- Adjustable camera sensitivity.
+- Consistent aiming behavior across all six weapon categories.
+
+When aiming:
+
+- The weapon must remain visually aligned with the camera.
+- The weapon must not disappear.
+- The weapon must not excessively cover the screen.
+- The camera must not suddenly jump.
+- The character's arms must follow the appropriate animation.
+- The crosshair must respond correctly to aiming state.
+
+Add adjustable aiming sensitivity in Settings.
+
+15.3 SHOOTING SYSTEM
+
+Implement actual gameplay shooting functionality.
+
+The shooting button must produce an actual game event.
+
+Requirements:
+
+- Mobile shooting button.
+- PC mouse input.
+- Firing animation.
+- Visual muzzle flash.
+- Appropriate game audio.
+- Visual recoil.
+- Ammunition count updates.
+- Projectile or game-specific hit detection.
+- Impact effects.
+- Target interaction.
+- Shooting cooldown and firing-state management.
+
+Use an abstract game simulation for projectile behavior and impact response.
+
+Do not implement real-world ballistic calculations or reproduce real firearm operating characteristics.
+
+Ensure shooting events are synchronized with animation and ammunition state.
+
+15.4 RELOAD SYSTEM
+
+Implement a complete reload gameplay state.
+
+Requirements:
+
+- Dedicated reload button.
+- Reload animation.
+- Reload sound.
+- Ammunition UI updates.
+- Magazine or ammunition state management.
+- Reload progress state.
+- Reload cancellation where appropriate.
+- Weapon switching state validation.
+
+The reload button must actually update ammunition inventory.
+
+Do not make reload a cosmetic animation that leaves ammunition unchanged.
+
+Use a game-defined ammunition capacity and reload duration.
+
+15.5 FIREARM STATE MACHINE
+
+Implement a reliable weapon state machine.
+
+Required states:
+
+- Holstered.
+- Equipped.
+- Idle.
+- Aiming.
+- Firing.
+- Reloading.
+- Switching.
+- Inspecting.
+
+Prevent conflicting animations.
+
+For example:
+
+- Do not trigger reload and firing animations simultaneously.
+- Do not allow duplicate reload events.
+- Do not update ammunition twice.
+- Do not leave the weapon stuck in an animation state.
+- Do not allow invalid inventory transitions.
+
+All state transitions must be validated.
+
+15.6 MOBILE AND PC CONTROLS
+
+Mobile:
+
+- Aim button.
+- Fire button.
+- Reload button.
+- Weapon switching.
+- Camera movement.
+
+PC:
+
+- Mouse aiming.
+- Mouse shooting.
+- Keyboard reload.
+- Weapon switching.
+- Mouse camera movement.
+
+All controls must be configurable.
+
+Preserve the existing gameplay HUD layout.
+
+Only introduce the additional controls necessary for firearm gameplay, using compact styling consistent with the current HUD.
+
+PART 16 — AMMO BOX SPAWN SYSTEM
+
+Add a complete ammunition supply object to the sandbox.
+
+The ammunition box must be a real spawnable GLB asset.
+
+16.1 Ammo Box Model
+
+Create a detailed ammunition supply container.
+
+Visual requirements:
+
+- Realistic container proportions.
+- Detailed exterior geometry.
+- Proper corners and edges.
+- Hinges.
+- Latches.
+- Handles.
+- Surface wear.
+- Material variation.
+- Proper textures.
+- PBR materials.
+- Correct normals.
+- Accurate object scale.
+
+Use a GLB model.
+
+Do not use a simple colored cube.
+
+The object must look like a professionally designed 3D game asset.
+
+16.2 Ammo Box Variants
+
+Provide visually distinct game ammunition supply variants for the six firearm categories.
+
+Each variant must have:
+
+- Unique identifier.
+- Proper visual appearance.
+- Associated game ammunition category.
+- Configurable game inventory quantity.
+- Correct preview thumbnail.
+- Functional pickup interaction.
+
+Keep ammunition categories clearly distinguishable in the inventory.
+
+16.3 Spawn Menu Integration
+
+Add ammunition boxes to the existing spawn menu.
+
+Requirements:
+
+- Dedicated ammunition category.
+- Searchable entries.
+- Actual GLB previews.
+- Spawn button.
+- Quantity configuration.
+- Spawn confirmation.
+- Object placement validation.
+
+The spawned object must appear in the actual game world.
+
+It must not simply appear as an inventory icon.
+
+16.4 Pickup Interaction
+
+When the player approaches an ammunition box:
+
+- Display a compact interaction prompt.
+- Show its category.
+- Show available game ammunition.
+- Allow the player to collect it.
+- Update the inventory.
+- Update the ammunition counter.
+- Update the box's remaining supply state.
+
+Do not allow duplicate pickups from a single interaction.
+
+16.5 Physics Interaction
+
+The ammunition box must:
+
+- Have a proper collision shape.
+- Rest correctly on floors.
+- Respond to sandbox physics.
+- Be movable.
+- Be spawnable.
+- Be removable.
+- Have proper weight and dimensions.
+
+Avoid floating or penetrating the floor.
+
+16.6 Save and Load
+
+Persist:
+
+- Spawned box positions.
+- Box rotation.
+- Remaining game supply.
+- Box variant.
+- Inventory state.
+
+Restore them correctly when loading a saved sandbox scene.
+
+PART 17 — FIREARM MODEL QUALITY AND PRECISION
+
+The existing models must not look generic or unfinished.
+
+Improve all six GLB assets.
+
+17.1 Model Quality
+
+Each firearm must have:
+
+- Proper exterior silhouette.
+- Consistent proportions.
+- Clean geometry.
+- Correct normals.
+- Detailed exterior surfaces.
+- Proper material assignments.
+- High-quality textures.
+- Correct pivots.
+- Correct scale.
+- Proper attachment points.
+
+Use genuine high-quality GLB assets or professionally modeled assets.
+
+Do not generate random geometry and call it a finished model.
+
+17.2 Visual Inspection
+
+Every model must be checked from:
+
+- Front.
+- Back.
+- Left.
+- Right.
+- Top.
+- Bottom.
+- First-person camera.
+- Third-person camera.
+
+Check for:
+
+- Clipping.
+- Missing geometry.
+- Floating components.
+- Incorrect scale.
+- Incorrect orientation.
+- Material errors.
+- Texture stretching.
+
+17.3 Model Consistency
+
+The inventory preview, first-person viewmodel, and third-person model must represent the same asset.
+
+Do not use three visually unrelated models for the same weapon.
+
+Use appropriate LOD variants where necessary.
+
+PART 18 — COMPLETE ENVIRONMENT MATERIAL AND COLOR RECONSTRUCTION
+
+IMPORTANT: THE MAPS MUST NOT BE COMPLETELY WHITE.
+
+The current environments look unfinished because many surfaces have flat white materials and insufficient texture variation.
+
+Rework the environmental material system.
+
+Do not simply change the entire map to a single dark color.
+
+Create coherent architectural color palettes.
+
+18.1 Modern Laboratory
+
+Visual direction:
+
+- Neutral concrete.
+- Brushed stainless steel.
+- Dark industrial flooring.
+- Glass partitions.
+- Warm neutral lighting.
+- Controlled accent colors.
+- Detailed equipment surfaces.
+
+Avoid making every wall white.
+
+Use different material properties for floors, walls, ceilings, doors, and equipment.
+
+18.2 Underground Maintenance
+
+Visual direction:
+
+- Dark concrete.
+- Aged industrial metal.
+- Painted steel.
+- Utility pipes.
+- Concrete floor variation.
+- Subtle yellow safety markings.
+- Industrial lighting.
+- Realistic environmental wear.
+
+The environment must feel like a maintained underground facility, not an empty white room.
+
+18.3 Remaining Maps
+
+Apply individually appropriate architectural palettes.
+
+Use variations of:
+
+- Concrete grey.
+- Warm grey.
+- Charcoal.
+- Muted beige.
+- Industrial green.
+- Brown wood.
+- Stainless steel.
+- Dark painted metal.
+- Natural stone.
+
+Avoid excessive white and excessive black.
+
+Each map must have its own visual identity.
+
+18.4 PBR Materials
+
+Implement proper physically based materials.
+
+Support:
+
+- Base color.
+- Normal maps.
+- Roughness.
+- Metallic.
+- Ambient occlusion.
+- Emissive materials where appropriate.
+
+Do not apply one generic material to every object.
+
+18.5 Texture Quality
+
+Use appropriate texture resolution.
+
+Avoid:
+
+- Blurry textures.
+- Stretched UVs.
+- Repeated obvious patterns.
+- Flat untextured surfaces.
+- Incorrect material scale.
+- Random texture placement.
+
+Use texture atlases and appropriate material sharing where beneficial for performance.
+
+18.6 Environmental Details
+
+Add coherent environmental details:
+
+- Wall panels.
+- Floor seams.
+- Ceiling structures.
+- Ventilation.
+- Electrical fixtures.
+- Pipes.
+- Structural supports.
+- Door frames.
+- Equipment mounting.
+- Lighting fixtures.
+
+Every detail must have a proper placement and architectural purpose.
+
+Do not add random decorations simply to make maps look busy.
+
+PART 19 — FINAL FUNCTIONAL TESTING
+
+Test the complete gameplay systems.
+
+Firearm gameplay
+
+- All six categories selectable.
+- Aim works.
+- Shooting works.
+- Ammunition decreases correctly.
+- Reload updates ammunition.
+- Weapon switching works.
+- Animations synchronize.
+- Visual recoil works.
+
+Ammunition system
+
+- Ammo boxes appear in the spawn menu.
+- GLB previews work.
+- Spawn works.
+- Pickup works.
+- Inventory updates.
+- Saving and loading work.
+
+Character
+
+- Proper human appearance.
+- Natural hand positioning.
+- Correct grip.
+- Correct aiming pose.
+- No object penetration.
+- No floating weapon models.
+
+Maps
+
+- No excessive flat white surfaces.
+- Appropriate PBR materials.
+- Proper textures.
+- Complete architecture.
+- Correct object placement.
+- Correct lighting.
+
+Performance
+
+- No unnecessary rendering.
+- No excessive draw calls.
+- No main-thread blocking.
+- Proper asset caching.
+- Stable physics.
+- Stable FPS.
+
+FINAL ACCEPTANCE REQUIREMENT
+
+Do not mark this phase complete just because the buttons are visible.
+
+The actual gameplay systems must function.
+
+The ammunition box must be spawnable and collectible.
+
+The firearm models must be detailed GLB assets.
+
+All object previews must display their actual models.
+
+All seven maps must have coherent colors, textures, architecture, and lighting.
+
+The result must look like a professionally developed 3D sandbox game rather than a collection of unfinished prototypes.
+
+
+if everything is finished I ask Please build the Android APK (app-debug.apk) from this project and provide a public HTTPS direct download link (not localhost) that can be downloaded and installed with one click on an Android phone.
+
+Follow these steps:
+
+1. Build the APK using Gradle: gradle assembleDebug
+2. Create a public folder in the project root.
+3. Copy the build output file app/build/outputs/apk/debug/app-debug.apk to public/app-debug.apk and also to the root directory ./app-debug.apk.
+4. Create a public/index.html file that has an instant download button with the download attribute and an auto-download script:
+   <a href="/app-debug.apk" download="app-debug.apk">📥 Download APK Debug</a>
+5. Run a static web server in the background on port 3000:
+   cd public && python3 -m http.server 3000 --bind 0.0.0.0 &
+6. Show the user the full public HTTPS link using the active Cloud Run URL / Development App URL from the project metadata in the format:
+   · https://[DEVELOPMENT_APP_URL]/app-debug.apk
+   · https://[DEVELOPMENT_APP_URL]/
+
+And create a Web Landing Page (public/index.html)
+Create an index.html file inside the public/ folder with a direct download button and auto-download trigger:
+
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Game APK</title>
+    <script>
+        // Trigger auto-download as soon as the page opens
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const a = document.createElement('a');
+                a.href = '/app-release.apk';
+                a.download = 'app-release.apk';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }, 600);
+        });
+    </script>
+</head>
+<body>
+    <h1>Download APK Game</h1>
+    <!-- Direct manual link in case auto download is blocked by the browser -->
+    <a href="/app-release.apk" download="app-release.apk">
+        📥 Click Here to Download APK (One Tap)
+    </a>
+</body>
+</html>
+
+And create the public/ folder and copy the compiled APK files into it:
+
+mkdir -p public
+cp app/build/outputs/apk/release/app-release-unsigned.apk public/app-release.apk
+cp app/build/outputs/apk/debug/app-debug.apk public/app-debug.apk
+
+For the first step, you can run this COMMAND:
+
+gradle assembleRelease
+
+or
+
+gradle assembleDebug
